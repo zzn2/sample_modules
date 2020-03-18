@@ -1,6 +1,6 @@
-name: Clean Missing Data
-id: d2c5ca2f-7323-41a3-9b7e-da917c99f0c4
-version: 0.0.115
+name: Sample Module
+id: d2c5ca2f-7323-41a3-9b7e-da917c99f0c5
+version: 0.1.0
 isDeterministic: true
 category: Data Transformation
 description: Specifies how to handle the values missing from a dataset.
