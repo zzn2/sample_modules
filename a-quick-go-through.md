@@ -10,7 +10,7 @@
 
   ```bash
   pip install keyring artifacts-keyring
-  pip install --extra-index-url=https://msdata.pkgs.visualstudio.com/_packaging/azureml-modules%40Local/pypi/simple/ azureml-designer-tools==0.1.20.post11576103
+  pip install --extra-index-url=https://msdata.pkgs.visualstudio.com/_packaging/azureml-modules%40Local/pypi/simple/ azureml-designer-tools==0.1.20.post11580023
   ```
 
 * Prepare the environment
