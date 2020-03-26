@@ -3,15 +3,7 @@ amlModuleIdentifier:
   moduleName: Mpi Module
   moduleVersion: 0.0.1
 type: Mpi
-description: |
-  Mpi module for demo.
-  To create an MPI module:
-   * Set `type` to 'Mpi'.
-   * Optional: add `runConfig` to specify the specification of run-level configurations.
-  This module also demos:
-   * Input port which supports multiple data types.
-   * Specification of Integer / Mode parameters.
-   * How to use a pre-registered environment of the worksapace.
+description: Mpi module for demo.
 metadata:
   properties:
     familyId: d6b40840-256e-49e6-a25e-8ae762ec6dac
