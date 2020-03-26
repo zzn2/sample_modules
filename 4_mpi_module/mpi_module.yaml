@@ -19,7 +19,7 @@ metadata:
     helpDocument: http://readthedocs.com/proj
 inputs:
   - name: Input Port
-    type: [DataFrameDirectory, ImageDirectory]
+    type: [AnyFile, AnyDirectory]
   - name: Parameter 1
     type: String
     default: hello
@@ -37,7 +37,7 @@ inputs:
     description: The Integer parameter which has a range validation.
 outputs:
   - name: Output Port
-    type: DataFrameDirectory
+    type: AnyDirectory
 runConfig:
   nodeCount:
     type: Integer
