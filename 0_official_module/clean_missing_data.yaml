@@ -1,6 +1,7 @@
-name: My Awesome Module
-id: d2c5ca2f-7323-41a3-900e-da917c99f0c4
-version: 0.0.6.6
+amlModuleIdentifier:
+  namespace: zhizhu.com/test
+  moduleName: New Clean Missing Data
+  moduleVersion: 0.0.116.1
 isDeterministic: true
 category: Data Transformation
 description: Specifies how to handle the values missing from a dataset.
@@ -97,7 +98,7 @@ implementation:
       dependencies:
       - python=3.6.8
       - pip:
-        - azureml-designer-classic-modules==0.0.115
+        - azureml-designer-classic-modules==0.0.116
     command:
     - python
     - -m
@@ -114,12 +115,12 @@ implementation:
     - inputValue: Maximum missing value ratio
     - --cleaning-mode
     - inputValue: Cleaning mode
-    - --replacement-value
-    - inputValue: Replacement value
-    - --cols-with-all-missing-values
-    - inputValue: Cols with all missing values
-    - --generate-missing-value-indicator-column
-    - inputValue: Generate missing value indicator column
+    - - --replacement-value
+      - inputValue: Replacement value
+    - - --cols-with-all-missing-values
+      - inputValue: Cols with all missing values
+    - - --generate-missing-value-indicator-column
+      - inputValue: Generate missing value indicator column
     - --cleaned-dataset
     - outputPath: Cleaned dataset
     - --cleaning-transformation
