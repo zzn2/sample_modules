@@ -1,7 +1,7 @@
 moduleIdentifier:
   namespace: microsoft.com/office
   moduleName: Merge every n files together
-  version: 0.0.2
+  moduleVersion: 0.0.2
 metadata:
   annotations:
     familyId: cdd3b0ba-a1a1-4a70-bb71-88b9d59904b7

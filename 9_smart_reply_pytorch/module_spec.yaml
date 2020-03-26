@@ -1,7 +1,7 @@
 moduleIdentifier:
   namespace: microsoft.com/office
-  moduleName: '[AE365][SmartReply][AML][Test] PyTorch Distributed'
-  version: 0.0.2.0309172714
+  moduleName: "[AE365][SmartReply][AML][Test] PyTorch Distributed"
+  moduleVersion: 0.0.2.0309172714
 type: Mpi
 metadata:
   annotations:
