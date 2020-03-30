@@ -6,8 +6,8 @@ inputs:
   type:
     LocalPath:
       openapi_schema_validator:
-      type: string
-      pattern: "^file://.*$"
+        type: string
+        pattern: "^file://.*$"
 - name: merge_count
   type: Integer
   default: '100'
@@ -17,8 +17,8 @@ outputs:
   type:
     LocalPath:
       openapi_schema_validator:
-      type: string
-      pattern: "^file://.*$"
+        type: string
+        pattern: "^file://.*$"
 implementation:
   container:
     image: mcr.microsoft.com/azureml/base:intelmpi2018.3-ubuntu16.04
