@@ -2,28 +2,58 @@ amlIdentifier:
   moduleName: Merge every n files together cdd3b0ba
   version: 0.0.1
 inputs:
-- name: InputFolder
+- name: InputFolder with single simple type
+  type: String
+- name: InputFolder with single dict type
   type:
     LocalPath:
       openapi_schema_validator:
         type: string
         pattern: "^file://.*$"
+- name: InputFolder with multiple dict types
+  type:
+    - LocalPath:
+        openapi_schema_validator:
+          type: string
+          pattern: "^file://.*$"
+    - RemotePath:
+        openapi_schema_validator:
+          type: string
+          pattern: "^http://.*$"
+- name: InputFolder with merged type
+  type:
+    - LocalPath:
+        openapi_schema_validator:
+          type: string
+          pattern: "^file://.*$"
+    - String
+- name: InputFolder with multiple simple types
+  type:
+    - DateTime
+    - String
 - name: merge_count
   type: Integer
   default: '100'
   optional: true
 outputs:
-- name: OutputFolder
+- name: OutputFolder with dict type
   type:
     LocalPath:
       openapi_schema_validator:
         type: string
         pattern: "^file://.*$"
+- name: OutputFolder with simple type
+  type: String
 implementation:
   container:
     image: mcr.microsoft.com/azureml/base:intelmpi2018.3-ubuntu16.04
     command: [python, merge.py]
     args:
-    - inputPath: InputFolder
-    - outputPath: OutputFolder
+    - inputPath: InputFolder with single simple type
+    - inputPath: InputFolder with single dict type
+    - inputPath: InputFolder with multiple dict types
+    - inputPath: InputFolder with merged type
+    - inputPath: InputFolder with multiple simple types
+    - outputPath: OutputFolder with dict type
+    - outputPath: OutputFolder with simple type
     - inputValue: merge_count
