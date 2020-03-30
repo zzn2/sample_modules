@@ -8,11 +8,9 @@ description: |
   Demos how to specify an environment from a pre-built docker image.
 metadata:
   properties:
-    familyId: 4118f5b3-5d39-4bec-baea-230610dcbe6
     tags: [nlp, bert]
     contact: AzureML Studio Team <stcamlstudiosg@microsoft.com>
-    projectUrl: http://github.com/corp/proj
-    documentUrl: http://readthedocs.com/proj
+    helpDocument: http://readthedocs.com/proj
 inputs:
   - name: Input Port
     type: DataFrameDirectory

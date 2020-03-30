@@ -1,19 +1,25 @@
 amlModuleIdentifier:
-  namespace: microsoft.com/office
+  namespace: microsoft.com/office/demo
   moduleName: Mpi Module
   moduleVersion: 0.0.1
 type: Mpi
-description: Mpi module for demo.
+description: |
+  Mpi module for demo.
+  To create an MPI module:
+   * Set `type` to 'Mpi'.
+   * Optional: add `runConfig` to specify the specification of run-level configurations.
+  This module also demos:
+   * Input port which supports multiple data types.
+   * Specification of Integer / Mode parameters.
+   * How to use a pre-registered environment of the worksapace.
 metadata:
   properties:
-    familyId: d6b40840-256e-49e6-a25e-8ae762ec6dac
     tags: [nlp, bert]
     contact: AzureML Studio Team <stcamlstudiosg@microsoft.com>
-    projectUrl: http://github.com/corp/proj
-    documentUrl: http://readthedocs.com/proj
+    helpDocument: http://readthedocs.com/proj
 inputs:
   - name: Input Port
-    type: [AnyFile, AnyDirectory]
+    type: [DataFrameDirectory, ImageDirectory]
   - name: Parameter 1
     type: String
     default: hello
@@ -31,7 +37,7 @@ inputs:
     description: The Integer parameter which has a range validation.
 outputs:
   - name: Output Port
-    type: AnyDirectory
+    type: DataFrameDirectory
 runConfig:
   nodeCount:
     type: Integer
@@ -43,15 +49,18 @@ runConfig:
     default: 2
 implementation:
   container:
-    image: mcr.microsoft.com/azureml/base:intelmpi2018.3-ubuntu16.04
-    conda:
-      name: project_environment
-      channels:
-      - defaults
-      dependencies:
-      - python=3.6.8
-      - pip:
-        - azureml-designer-classic-modules==0.0.116
+    amlEnvironment:
+      docker:
+        baseImage: mcr.microsoft.com/azureml/base:intelmpi2018.3-ubuntu16.04
+      python:
+        condaDenpendencies:
+          name: project_environment
+          channels:
+            - defaults
+          dependencies:
+            - python=3.6.8
+            - pip:
+              - azureml-designer-classic-modules==0.0.116
     command: [python, module_entry.py]
     args: [
       --input, {inputPath: Input Port },

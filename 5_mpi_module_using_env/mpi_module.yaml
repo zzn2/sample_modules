@@ -14,11 +14,9 @@ description: |
    * How to use a pre-registered environment of the worksapace.
 metadata:
   properties:
-    familyId: d6b40840-256e-49e6-a25e-8ae762ec6dac
     tags: [nlp, bert]
     contact: AzureML Studio Team <stcamlstudiosg@microsoft.com>
-    projectUrl: http://github.com/corp/proj
-    documentUrl: http://readthedocs.com/proj
+    helpDocument: http://readthedocs.com/proj
 inputs:
   - name: Input Port
     type: [DataFrameDirectory, ImageDirectory]
@@ -51,7 +49,7 @@ runConfig:
     default: 2
 implementation:
   container:
-    environment:
+    amlEnvironment:
       name: DemoEnv
       version: 0.0.1
     command: [python, module_entry.py]

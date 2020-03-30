@@ -7,11 +7,9 @@ description: |
   HDInsight module for demo.
 metadata:
   properties:
-    familyId: ffe7745f-e041-4374-8197-7c37d5a8f135
     tags: [nlp, bert]
     contact: AzureML Studio Team <stcamlstudiosg@microsoft.com>
-    projectUrl: http://github.com/corp/proj
-    documentUrl: http://readthedocs.com/proj
+    helpDocument: http://readthedocs.com/proj
 inputs:
   - name: Input Port
     type: DataFrameDirectory
