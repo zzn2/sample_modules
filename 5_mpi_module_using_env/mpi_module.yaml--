@@ -1,4 +1,4 @@
-moduleIdentifier:
+amlModuleIdentifier:
   namespace: microsoft.com/office/demo
   moduleName: Mpi Module
   moduleVersion: 0.0.1
@@ -50,17 +50,8 @@ runConfig:
 implementation:
   container:
     amlEnvironment:
-      docker:
-        baseImage: mcr.microsoft.com/azureml/base:intelmpi2018.3-ubuntu16.04
-      python:
-        condaDenpendencies:
-          name: project_environment
-          channels:
-            - defaults
-          dependencies:
-            - python=3.6.8
-            - pip:
-              - azureml-designer-classic-modules==0.0.116
+      name: DemoEnv
+      version: 0.0.1
     command: [python, module_entry.py]
     args: [
       --input, {inputPath: Input Port },

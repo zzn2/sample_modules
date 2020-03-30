@@ -1,22 +1,14 @@
-moduleIdentifier:
-  namespace: microsoft.com/office
-  moduleName: Merge every n files together
-  version: 0.0.2
-metadata:
-  annotations:
-    familyId: cdd3b0ba-a1a1-4a70-bb71-88b9d59904b7
-    tags:
-    - Office
+name: Merge every n files together cdd3b0ba
 inputs:
 - name: InputFolder
-  type: [AzureEncryptedBlobReference, AnyDirectory]
+  type: LocalPath
 - name: merge_count
   type: Integer
-  default: 100
+  default: '100'
   optional: true
 outputs:
 - name: OutputFolder
-  type: AzureEncryptedBlobReference
+  type: LocalPath
 implementation:
   container:
     image: mcr.microsoft.com/azureml/base:intelmpi2018.3-ubuntu16.04

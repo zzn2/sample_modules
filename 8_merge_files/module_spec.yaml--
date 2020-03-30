@@ -1,4 +1,4 @@
-moduleIdentifier:
+amlModuleIdentifier:
   namespace: microsoft.com/office
   moduleName: Merge every n files together
   version: 0.0.2

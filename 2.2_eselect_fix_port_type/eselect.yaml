@@ -1,4 +1,4 @@
-amlModuleIdentifier:
+moduleIdentifier:
   namespace: example.com/modules
   moduleName: eselect
   moduleVersion: 0.0.2

@@ -1,12 +1,13 @@
-moduleIdentifier:
+amlModuleIdentifier:
+  namespace: example.com/modules
   moduleName: eselect
-  moduleVersion: 0.0.1
+  moduleVersion: 0.0.2
 description: Selects columns from input file based on the column description in the first line. Similar to cut (and grep), but column names can be used.
 inputs:
 - name: columns
   type: String
 - name: input
-  type: String
+  type: AnyDirectory
 outputs:
 - name: output
   type: AnyFile

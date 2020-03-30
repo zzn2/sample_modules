@@ -1,4 +1,4 @@
-moduleIdentifier:
+amlModuleIdentifier:
   namespace: zhizhu.com/test
   moduleName: New Clean Missing Data
   moduleVersion: 0.0.116.1
@@ -100,8 +100,6 @@ implementation:
       - pip:
         - azureml-designer-classic-modules==0.0.116
     command:
-    - python
-    - invoker.py
     - python
     - -m
     - azureml.studio.modulehost.module_invoker

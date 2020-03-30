@@ -1,11 +1,10 @@
-moduleIdentifier:
-  namespace: example.com/modules
-  moduleName: Basic Module
-  moduleVersion: 0.0.2
+amlModuleIdentifier:
+  namespace: microsoft.com/office/demo
+  moduleName: HDInsight Module
+  moduleVersion: 0.0.1
+type: HDInsight
 description: |
-  Basic module for demo.
-  No `type` specified in spec and will defaults to 'Basic'.
-  Demos how to specify an environment from a pre-built docker image.
+  HDInsight module for demo.
 metadata:
   properties:
     tags: [nlp, bert]
@@ -25,7 +24,7 @@ outputs:
     type: DataFrameDirectory
 implementation:
   container:
-    image: mcr.microsoft.com/azureml/base:intelmpi2018.3-ubuntu16.04
+    image: office/module_runner_docker
     command: [python, module_entry.py]
     args: [
       --input, {inputPath: Input Port },
