@@ -1,5 +1,5 @@
 amlModuleIdentifier:
-  moduleName: Additional Files
+  moduleName: Additional Files with SymLink
   moduleVersion: 0.0.1
   namespace: microsoft.com/azureml/samples
 metadata:
