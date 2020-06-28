@@ -3,7 +3,7 @@
 
 amlModuleIdentifier:
   moduleName: Module with custom Source Directory
-  moduleVersion: 0.0.1
+  moduleVersion: 0.0.3
   namespace: microsoft.com/azureml/samples
 metadata:
   annotations:
