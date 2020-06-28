@@ -1,0 +1,21 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
+amlModuleIdentifier:
+  moduleName: Module with custom Source Directory
+  moduleVersion: 0.0.1
+  namespace: microsoft.com/azureml/samples
+metadata:
+  annotations:
+    tags:
+      - Samples
+description: A sample to demostrate modules with customized source directory
+inputs: []
+outputs: []
+implementation:
+  container:
+    amlEnvironment:
+      python:
+        condaDependenciesFile: module_entry/conda.yaml
+    sourceDirectory: ../
+    command: [python, module_entry/run.py]
